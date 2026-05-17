@@ -3,23 +3,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { PSXLogo } from '@/components/psx-logo'
-import { Sparkles, Crown, ShieldCheck } from 'lucide-react'
-
-export const metadata = {
-  title: 'PSX Pricing - Pro y Premium',
-  description: 'Elige el plan PSX para acceder a suscripciones Pro y Premium con AI ilimitada, recursos y soporte prioritario.',
-  openGraph: {
-    title: 'PSX Pricing - Pro y Premium',
-    description: 'Elige el plan PSX para acceder a suscripciones Pro y Premium con AI ilimitada, recursos y soporte prioritario.',
-    type: 'website',
-    images: ['/psx-favicon.svg'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'PSX Pricing - Pro y Premium',
-    description: 'Elige el plan PSX para acceder a suscripciones Pro y Premium con AI ilimitada.',
-  },
-}
+import { ShieldCheck } from 'lucide-react'
 
 const plans = [
   {
