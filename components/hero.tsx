@@ -34,7 +34,7 @@ export function Hero() {
   const [searchSuggestions, setSearchSuggestions] = useState<Tool[]>([])
   const [showSuggestions, setShowSuggestions] = useState(false)
   const router = useRouter()
-  const supabase = createClient()
+  const [supabase] = useState(() => createClient())
 
   useEffect(() => {
     // Fetch trending keywords

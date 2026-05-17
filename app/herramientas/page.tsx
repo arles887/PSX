@@ -47,7 +47,7 @@ export default function HerramientasPage() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [showPremiumOnly, setShowPremiumOnly] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
-  const supabase = createClient()
+  const [supabase] = useState(() => createClient())
 
   useEffect(() => {
     const fetchData = async () => {

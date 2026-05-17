@@ -1,27 +1,10 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { Button } from '@/components/ui/button'
 import { PSXLogo } from '@/components/psx-logo'
 import { useAuth } from '@/lib/auth-context'
 import { Resource } from '@/lib/types'
 import { Search, Filter, Bookmark, Download } from 'lucide-react'
-
-export const metadata = {
-  title: 'Recursos Guardados | PSX',
-  description: 'Gestiona tus recursos guardados, descargas y contenido premium en el panel de PSX.',
-  openGraph: {
-    title: 'Recursos Guardados | PSX',
-    description: 'Gestiona tus recursos guardados y contenido premium con filtros avanzados y SEO optimizado.',
-    type: 'website',
-    images: ['/psx-favicon.svg'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Recursos Guardados | PSX',
-    description: 'Gestiona tus recursos guardados y contenido premium con filtros avanzados.',
-  },
-}
 
 const sortOptions = [
   { value: 'latest', label: 'Más recientes' },

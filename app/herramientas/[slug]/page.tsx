@@ -44,7 +44,7 @@ export default function ToolPage() {
   const router = useRouter()
   const slug = params.slug as string
   const { user, profile } = useAuth()
-  const supabase = createClient()
+  const [supabase] = useState(() => createClient())
   
   const [tool, setTool] = useState<Tool | null>(null)
   const [relatedTools, setRelatedTools] = useState<Tool[]>([])
