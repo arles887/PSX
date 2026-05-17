@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200" role="img" aria-label="PSX logo">
+  <defs>
+    <linearGradient id="metal" x1="0" x2="1">
+      <stop offset="0%" stop-color="#d6d8dc" />
+      <stop offset="50%" stop-color="#b0b3b8" />
+      <stop offset="100%" stop-color="#f7f8fa" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#9b59ff" stop-opacity="0.85" />
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="none" />
+
+  <!-- PSX letters with metallic gradient and neon inner glow -->
+  <g filter="url(#shadow)">
+    <g transform="translate(40,30)">
+      <path d="M30 140 L30 40 L70 40 L70 80 L110 80 L110 40 L150 40 L150 140 L110 140 L110 100 L70 100 L70 140 Z" fill="url(#metal)" />
+      <path d="M170 140 L200 40 L260 40 L230 140 Z" fill="url(#metal)" />
+      <path d="M320 140 L320 40 L370 40 L370 100 L430 100 L430 140 Z" fill="url(#metal)" />
+      <!-- neon stroke -->
+      <g opacity="0.85" filter="url(#softGlow)">
+        <path d="M30 140 L30 40 L70 40 L70 80 L110 80 L110 40 L150 40 L150 140 L110 140 L110 100 L70 100 L70 140 Z" fill="none" stroke="url(#glow)" stroke-width="6" stroke-linejoin="round" />
+        <path d="M170 140 L200 40 L260 40 L230 140 Z" fill="none" stroke="url(#glow)" stroke-width="6" stroke-linejoin="round" />
+        <path d="M320 140 L320 40 L370 40 L370 100 L430 100 L430 140 Z" fill="none" stroke="url(#glow)" stroke-width="6" stroke-linejoin="round" />
+      </g>
+    </g>
+  </g>
+
+  <!-- subtle reflections -->
+  <g transform="translate(40,30)" opacity="0.12">
+    <path d="M35 60 L145 60 L145 80 L35 80 Z" fill="#ffffff" />
+  </g>
+
+</svg>
